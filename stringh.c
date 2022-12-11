@@ -1,14 +1,21 @@
 // strcat function realisation
 
 #include <stdio.h>
+#include <string.h>
 
 void s21_strcat(char *s, char *t);
+void s21_itoa(int n, char s[]);
+void s21_reverse(char s[]);
+
 
 int main() {
   char s[100] = "Hello, ";
   char t[] = "world!";
   s21_strcat(s, t);
   printf("%s", s);
+  char r[100];
+  s21_itoa(123, r);
+  printf("%s", r);
   return 0;
 }
 
@@ -18,19 +25,6 @@ void s21_strcat(char *s, char *t) {
     s++;
     t++;
   }
-}// перевод числа в строку
-
-#include <stdio.h>
-#include <string.h>
-
-void s21_itoa(int n, char s[]);
-void s21_reverse(char s[]);
-
-int main() {
-  char s[100];
-  s21_itoa(123, s);
-  printf("%s", s);
-  return 0;
 }
 
 void s21_itoa(int n, char s[]) {
